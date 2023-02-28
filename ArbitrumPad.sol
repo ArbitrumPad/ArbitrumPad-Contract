@@ -503,13 +503,13 @@ contract ArbitrumPad is Context, IERC20, Ownable {
     function setBuy(uint256 buyFeeNew) external onlyOwner(){
         buyFee = buyFeeNew;
         _totalBuyTax = buyFee;
-        require(_totalBuyTax <= 1 , "Max buy fee under 14%");
+        require(_totalBuyTax <= 1 , "Max buy fee 1%");
     }
 
     function setSell(uint256 sellFeeNew) external onlyOwner(){
         sellFee = sellFeeNew;
         _totalSellTax = sellFee;
-        require(_totalSellTax <= 1 , "Max sell fee under 14%");
+        require(_totalSellTax <= 1 , "Max sell fee 1%");
     }
 
     function Trade() external onlyOwner{
